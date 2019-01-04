@@ -5,6 +5,7 @@
     [string]$appName,
     [int]$buildsLimit = 2,
     [switch]$queue,
+	[switch]$showVerbose,
     [switch]$showReport
 )
 
@@ -72,9 +73,12 @@ if ($queue)
         foreach ($build in $tempBuilds)
         {
             $response = Invoke-ApiRequest -request "/v0.1/apps/$ownerName/$appName/builds/$($build.id)" -method Get 
-
-            Write-Host "Build [$($response.sourceBranch)][$($response.id)] $($response.status)"
-
+			
+			if($showVerbose)
+			{
+				Write-Host "Build [$($response.sourceBranch)][$($response.id)] $($response.status)"
+			}
+			
             if ($response.result) 
             {
                 $builds.Remove($build)
