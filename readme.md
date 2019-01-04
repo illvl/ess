@@ -8,17 +8,17 @@ Must first create and save value of AppCenter API Token. That can be done in App
 
 ### Required Parameters
 
--appToken [<string>] - API authorization token used in AppCenter.
+-appToken [string] - API authorization token used in AppCenter.
 
--appName [<string>] - name of your application in AppCenter. Notice that you should use actual name of application and not the display name.
+-appName [string] - name of your application in AppCenter. Notice that you should use actual name of application and not the display name.
 
--buildsLimit [<int>] - number of builds that will be queued in parallel. Default value is 2.
+-buildsLimit [int] - number of builds that will be queued in parallel. Default value is 2.
 
--queue [<switchParameter>] - confirmation that builds must be started.
+-queue [switchParameter] - confirmation that builds must be started.
 
--showVerbose [<switchParameter>] - shows execution status.
+-showVerbose [switchParameter] - shows execution status.
 
--showReport [<switchParameter>] - shows summarized report about latest builds in definitions.
+-showReport [switchParameter] - shows summarized report about latest builds in definitions.
 
 ## Build With
 
